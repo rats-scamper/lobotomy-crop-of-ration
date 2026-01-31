@@ -1,4 +1,4 @@
-
+<img src="./lcorp rice 1" width="100%" />
 
 ## Guidelines to make things work:
 
