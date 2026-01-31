@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=lobocorp
+Description=lobocorp plymouth
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/lobocorp
+ScriptFile=/usr/share/plymouth/themes/lobocorp/lobocorp.script
