@@ -1,0 +1,72 @@
+body {
+	--radius-s: 0px;
+	--radius-m: 0px;
+	--radius-l: 0px;
+	--input-radius: 0px;
+	--tab-radius-active: 0px;
+	--checkbox-radius: 0px;
+	--toggle-radius: 0px;
+	--toggle-thumb-radius: 0px;
+	--slider-thumb-radius: 0px;
+}
+
+.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
+	display: none;
+}
+
+svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.menu {
+	padding: var(--size-2-1);
+}
+
+.menu-item {
+	padding: var(--size-4-1) var(--size-4-2);
+}
+
+.menu-separator {
+	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+body {
+  --font-text-theme: Railway;
+  --font-interface-theme: Norwester;
+  --h1-font: Norwester;
+  --h2-font: Norwester;
+  --h3-font: Norwester;
+  --h4-font: Norwester;
+  --h5-font: Norwester;
+  --h6-font: Norwester;
+}
+
+.theme-dark {
+  --background-primary: #0D0D0D;
+  --background-secondary: #0b0c0b;
+  --background-primary-alt: #0d0d0d;
+  --background-secondary-alt: #0b0c0b;
+  --text-normal: #FFFFA1;
+  --text-accent: #167A6C;
+  --h1-color: #FF3A3A;
+  --h2-color: #FF3A3A;
+  --h3-color: #FF3A3A;
+  --h4-color: #FF3A3A;
+  --h5-color: #FF3A3A;
+  --h6-color: #FF3A3A;
+  --color-red: #CB2642;
+  --color-orange: #fc3a39;
+  --color-yellow: #ffd13f;
+  --color-green: #1effad;
+  --color-cyan: #3FCCBD;
+  --color-blue: #38a5de;
+  --color-purple: #814a84;
+  --color-pink: #ff9ed7;
+  --background-modifier-border: #FFFFA1;
+  --background-modifier-border-hover: #167A6C;
+  --interactive-hover: #167A6C;
+  --caret-color: #167A6C;
+}
