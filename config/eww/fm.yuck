@@ -1,0 +1,92 @@
+(defwindow fm
+	:monitor 0
+	:geometry
+	(geometry
+		:x "35%"
+		:y "0%"
+		:width "720px"
+		:height "350px"
+		:anchor "center left"
+	)
+	:stacking "bg"
+	:windowtype "normal"
+	:wm-ignore "false"
+	(fm)
+)
+
+(defwidget fm []
+	(box
+		(overlay
+            (image :path "/home/manager-x/eww/fm/cell.png")
+			(image :path "/home/manager-x/eww/fm/${gifp} ${state}.gif")
+            (image :path "/home/manager-x/eww/fm/bars/${workp}.png")
+        (overlay
+            (box
+                :halign "end"
+                :valign "center"
+                :style "margin-right: 20px;"
+				:orientation "v"
+				:spacing "10"
+			(box :orientation "h" :spacing "10"
+                    (transform
+                            :scale-x "100%"
+                            :scale-y "100%"
+                                    (button
+                                        :onclick "eww update gifp='works/inst'; eww update workp='inst'; echo 1 > /tmp/work.txt; bash /home/manager-x/eww/fm/state.sh breach"
+                                        :style "border-style: solid; border-width: 5px; border-color: black; padding:25px"
+                                    )
+
+                    )
+                    (transform
+                            :scale-x "100%"
+                            :scale-y "100%"
+                                    (button
+                                        :onclick "eww update gifp='works/ins'; eww update workp=ins; echo 2 > /tmp/work.txt; bash /home/manager-x/eww/fm/state.sh breach &"
+                                        :style "border-style: solid; border-width: 5px; border-color: black; padding:25px"
+                                    )
+                )
+            )
+            (box :orientation "h" :spacing "10"
+                    (transform
+                            :scale-x "100%"
+                            :scale-y "100%"
+                                    (button
+                                        :onclick "eww update gifp='works/atch';eww update workp=atch; echo 3 > /tmp/work.txt; bash /home/manager-x/eww/fm/state.sh breach"
+                                        :style "border-style: solid; border-width: 5px; border-color: black; padding:25px"
+                                    )
+
+                    )
+                    (transform
+                            :scale-x "100%"
+                            :scale-y "100%"
+                                    (button
+                                        :onclick "eww update gifp='works/repr';eww update workp=repr; echo 4 > /tmp/work.txt; bash /home/manager-x/eww/fm/state.sh breach &"
+                                        :style "border-style: solid; border-width: 5px; border-color: black; padding:25px"
+                                    )
+
+                    )
+            )
+            )
+
+        (transform
+        :translate-x "-12%"
+        :translate-y "-36%"
+            (label
+		    	:text "Forsaken Murderer"
+				:style "font-size: 18px; color: #FFFFA1; font-family: 'Norwester';"
+            )
+        )
+        )
+        )
+    )
+)
+
+(defpoll gifp :interval "5s"
+    "echo 'idle'")
+
+(defpoll workp :interval "5s"
+    "eww update")
+
+(defpoll state :interval "5s"
+"bash /home/manager-x/eww/fm/state.sh stater"
+)

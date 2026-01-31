@@ -1,0 +1,140 @@
+(defwindow enkclock
+           :monitor 0
+           :geometry (geometry :x "-10px"
+                               :y "-10px"
+                               :width "456px"
+                               :height "125px"
+                               :anchor "top left")
+           :stacking "bg"
+           :windowtype "dock"
+           :wm-ignore true
+           :reserve (struts :distance "125px" :side "top")
+    (enk :datep datep :weekp weekp :tod tod))
+
+(defpoll datep :interval "1s"
+              :initial "initial-value"  ; optional, defaults to poll at startup
+              :run-while time-visible   ; optional, defaults to 'true'
+  `date +%x`)
+
+(defpoll weekp 
+	:interval "1h"
+	"wday=$(date +'%u')
+	case $wday in
+		1)
+			echo I
+		;;
+		2)
+			echo II
+		;;
+		3)
+			echo III
+		;;
+		4)
+			echo IV
+		;;
+		5)
+			echo V
+		;;
+		6)
+			echo VI
+		;;
+		7)
+			echo VII
+		;;
+		*)
+			echo $time
+		;;
+	esac
+	"
+)
+(defpoll tod 
+	:interval "10m"
+	"time=$(date +'%H')
+	
+	case $time in
+
+		00 | 01 | 02 | 03 | 04 | 05 | 22 | 23)
+			echo MIDNIGHT
+		;;
+
+		06 | 07 | 08 | 09 | 10 | 11)
+			echo DAWN
+		;;
+		12 | 13 | 14 | 15)
+			echo NOON
+		;;
+		16 | 17 | 18 | 19 | 20 |21)
+			echo DUSK
+		;;
+		20 | 21 | 22)
+			echo 5
+		;;
+		*)
+			echo $time
+		;;
+	esac
+	"
+)
+
+(defpoll timep :interval "1s"
+    `date +%H:%M:%S`)
+
+
+(defwidget enk [?datep weekp tod]
+(box
+    (overlay
+        (transform 
+        :translate-x "0px"
+        :translate-y "-15px"
+        :scale-x "100%"
+        :scale-y "100%"
+        :halign "center"    
+			(image :path "/home/manager-x/eww/enkephalin/bar.png"		)
+        	)
+    	(transform
+        :translate-x "-20px"
+        :translate-y "-14px"
+            (label
+		    	:text "${timep}"
+				:style "font-size: 20px; color: #FC3A3A; font-family: 'Norwester';"
+            )
+        )
+	(overlay
+            (image
+			    :path "/home/manager-x/eww/enkephalin/enkblank.png"
+		    )
+   		    (image
+    		    :path "/home/manager-x/eww/enkephalin/${tod}.png"
+	        )
+            (transform 
+            :translate-y "29px"
+            	(label
+	    	    	:text datep
+	        		:class "txt"
+                    :style "font-size: 18px; color: #FC3A3A; font-family: 'Norwester'"
+                    )
+            )
+            (transform
+            :translate-x "-146px"
+            :translate-y "29px"
+            	(label
+	    	    	:text weekp
+	        		:class "txt"
+                    :style "font-size: 18px; color: #FC3A3A; font-family: 'Norwester'"
+                    )
+            )
+            (transform 
+                :translate-x "171px"
+                :translate-y "29px"
+                (box 
+	    	    	(label
+		    	    	:text "${tod}"
+		        		:class "txt"
+						:style "font-size: 11px; color: #FC3A3A; font-family: 'Norwester'"
+                    )
+                )
+            )            
+    )
+    )
+)
+)
