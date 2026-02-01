@@ -1,0 +1,162 @@
+{
+  "name": "lobocorp",
+  "schemaVersion": 1,
+  "colors": {
+    "background": {
+      "hex": "#0d0d0d",
+      "palette": 235
+    },
+    "foreground": {
+      "hex": "#efecc0",
+      "palette": 229
+    },
+    "frame_focused": {
+      "hex": "#cb2642",
+      "palette": 167
+    },
+    "frame_important": {
+      "hex": "#814a84",
+      "palette": 66
+    },
+    "text_focused": {
+      "hex": "#cb2642",
+      "palette": 167
+    },
+    "text_active": {
+      "hex": "#cb2642",
+      "palette": 142
+    },
+    "text_disabled": {
+      "hex": "#ffffa1",
+      "palette": 243
+    },
+    "text_hidden": {
+      "hex": "#ffffa1",
+      "palette": 237
+    },
+    "text_warning": {
+      "hex": "#3fccbd",
+      "palette": 214
+    },
+    "text_error": {
+      "hex": "#ff3a3a",
+      "palette": 167
+    },
+    "overlay_background": {
+      "hex": "#0d0d0d",
+      "palette": 239
+    },
+    "overlay_foreground": {
+      "hex": "#efecc0",
+      "palette": 223
+    },
+    "overlay_border": {
+      "hex": "#efecc0",
+      "palette": 109
+    },
+    "overlay_focused_border": {
+      "hex": "#3fccbd",
+      "palette": 167
+    },
+    "overlay_focused_text": {
+      "hex": "#efecc0",
+      "palette": 167
+    },
+    "shortcuts_background": {
+      "hex": "#0d0d0d",
+      "palette": 239
+    },
+    "shortcuts_foreground": {
+      "hex": "#efecc0",
+      "palette": 223
+    },
+    "shortcuts_background_focused": {
+      "hex": "#0d0d0d",
+      "palette": 124
+    },
+    "shortcuts_foreground_focused": {
+      "hex": "#814a84",
+      "palette": 229
+    },
+    "button_background_normal": {
+      "hex": "#0d0d0d",
+      "palette": 223
+    },
+    "button_foreground_normal": {
+      "hex": "#efecc0",
+      "palette": 237
+    },
+    "button_background_active": {
+      "hex": "#814a84",
+      "palette": 142
+    },
+    "button_foreground_active": {
+      "hex": "#efecc0",
+      "palette": 235
+    },
+    "header_background": {
+      "hex": "#0d0d0d",
+      "palette": 235
+    },
+    "header_foreground": {
+      "hex": "#cb2642",
+      "palette": 243
+    },
+    "footer_background": {
+      "hex": "#0d0d0d",
+      "palette": 132
+    },
+    "footer_foreground": {
+      "hex": "#814a84",
+      "palette": 229
+    },
+    "banner_background": {
+      "hex": "#0d0d0d",
+      "palette": 66
+    },
+    "banner_foreground": {
+      "hex": "#efecc0",
+      "palette": 229
+    },
+    "list_header_background": {
+      "hex": "#814a84",
+      "palette": 237
+    },
+    "list_header_foreground": {
+      "hex": "#ffffa1",
+      "palette": 214
+    },
+      "list_header_highlighted_background": {
+      "hex": "#814a84",
+      "palette": 214
+    },
+    "list_header_highlighted_foreground": {
+      "hex": "#efecc0",
+      "palette": 237
+    },
+    "list_item_highlighted_background": {
+      "hex": "#0d0d0d",
+      "palette": 142
+    },
+    "list_item_highlighted_foreground": {
+      "hex": "#3fccbd",
+      "palette": 237
+    },
+    "list_item_active_background": {
+      "hex": "#814a84",
+      "palette": 109
+    },
+    "list_item_active_foreground": {
+      "hex": "#efecc0",
+      "palette": 235
+    },
+    "list_item_active_highlighted_background": {
+      "hex": "#2de7b4",
+      "palette": 66
+    },
+    "list_item_active_highlighted_foreground": {
+      "hex": "#0d0d0d",
+      "palette": 229
+    }
+  }
+}
